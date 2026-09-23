@@ -24,6 +24,8 @@
     <string name="watermark_alpha">水印透明度</string>
     <string name="app_subtitle">批量图片加水印 · 液态玻璃界面</string>
     <string name="appearance">外观</string>
+    <string name="expand">展开主题色设置</string>
+    <string name="collapse">收起主题色设置</string>
     <string name="dark_mode">暗色模式</string>
     <string name="theme_color">主题色 · 莫兰迪与马卡龙预设</string>
     <string name="custom_color">自定义颜色</string>

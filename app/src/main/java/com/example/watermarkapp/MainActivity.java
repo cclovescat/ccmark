@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
     private SwitchMaterial swDarkMode;
     private android.widget.LinearLayout llSwatches;
     private MaterialButton btnCustomColor;
+    private View llAppearanceHeader;
+    private android.widget.LinearLayout llAppearanceContent;
+    private TextView tvAppearanceArrow;
 
     private List<Uri> selectedImageUris = new ArrayList<>();
     private Bitmap whiteWatermarkBitmap;
@@ -198,6 +201,9 @@ public class MainActivity extends AppCompatActivity {
         swDarkMode = findViewById(R.id.swDarkMode);
         llSwatches = findViewById(R.id.llSwatches);
         btnCustomColor = findViewById(R.id.btnCustomColor);
+        llAppearanceHeader = findViewById(R.id.llAppearanceHeader);
+        llAppearanceContent = findViewById(R.id.llAppearanceContent);
+        tvAppearanceArrow = findViewById(R.id.tvAppearanceArrow);
     }
 
     private void setupAppearance() {
@@ -222,6 +228,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showCustomColorDialog();
+            }
+        });
+
+        llAppearanceHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean expand = llAppearanceContent.getVisibility() != View.VISIBLE;
+                llAppearanceContent.setVisibility(expand ? View.VISIBLE : View.GONE);
+                tvAppearanceArrow.animate()
+                        .rotation(expand ? 180f : 0f)
+                        .setDuration(150)
+                        .start();
+                tvAppearanceArrow.setContentDescription(
+                        getString(expand ? R.string.collapse : R.string.expand));
             }
         });
     }
