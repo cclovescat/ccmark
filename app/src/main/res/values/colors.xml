@@ -21,7 +21,7 @@
     <color name="glass_blob_pink_end">#00F6E3EA</color>
     <color name="glass_card">#B3FFFFFF</color>
     <color name="glass_card_strong">#E6FFFFFF</color>
-    <color name="glass_stroke">#66FFFFFF</color>
+    <color name="glass_stroke">#4DFFFFFF</color>
     <color name="ripple_glass">#33808A94</color>
 
     <!-- Gray colors needed for layouts -->

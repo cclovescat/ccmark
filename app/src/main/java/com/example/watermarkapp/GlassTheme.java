@@ -273,7 +273,7 @@ public class GlassTheme {
                 & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
         int selectedStroke = nightMode ? 0xFFFFFFFF : 0xFF37474F;
         int index = 0;
-        int density = (int) (context.getResources().getDisplayMetrics().density * 38);
+        int density = (int) (context.getResources().getDisplayMetrics().density * 40);
 
         List<Preset> all = new ArrayList<>(MORANDI);
         all.addAll(MACARON);
