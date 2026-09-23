@@ -38,4 +38,15 @@
                 android:endColor="@color/glass_blob_pink_end" />
         </shape>
     </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:centerX="0.1"
+                android:centerY="0.75"
+                android:gradientRadius="440dp"
+                android:startColor="@color/glass_blob_lavender"
+                android:endColor="@color/glass_blob_lavender_end" />
+        </shape>
+    </item>
 </layer-list>

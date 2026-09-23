@@ -7,13 +7,17 @@
     <color name="text_on_secondary">#1C2A33</color>
 
     <color name="glass_bg_base">#14161B</color>
-    <color name="glass_blob_blue">#1D2B3A</color>
-    <color name="glass_blob_blue_end">#001D2B3A</color>
-    <color name="glass_blob_pink">#2B1F2E</color>
-    <color name="glass_blob_pink_end">#002B1F2E</color>
-    <color name="glass_card">#B31F222A</color>
-    <color name="glass_card_strong">#E62A2E38</color>
-    <color name="glass_stroke">#26FFFFFF</color>
+    <color name="glass_blob_blue">#1E2E44</color>
+    <color name="glass_blob_blue_end">#001E2E44</color>
+    <color name="glass_blob_pink">#2F1F30</color>
+    <color name="glass_blob_pink_end">#002F1F30</color>
+    <color name="glass_blob_lavender">#251E3D</color>
+    <color name="glass_blob_lavender_end">#00251E3D</color>
+    <color name="glass_card_top">#38FFFFFF</color>
+    <color name="glass_card_bottom">#1FFFFFFF</color>
+    <color name="glass_card">#2BFFFFFF</color>
+    <color name="glass_card_strong">#4DFFFFFF</color>
+    <color name="glass_stroke">#2EFFFFFF</color>
 
     <color name="gray_200">#2A2E36</color>
     <color name="gray_600">#9AA6B2</color>

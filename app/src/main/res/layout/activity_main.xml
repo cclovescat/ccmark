@@ -54,13 +54,6 @@
                     android:textStyle="bold"
                     android:letterSpacing="0.01"
                     android:textColor="@color/text_primary" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_subtitle"
-                    android:textSize="13sp"
-                    android:textColor="@color/text_secondary" />
             </LinearLayout>
         </LinearLayout>
 

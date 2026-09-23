@@ -15,13 +15,17 @@
 
     <!-- Liquid glass -->
     <color name="glass_bg_base">#EFF4F8</color>
-    <color name="glass_blob_blue">#D9E7F2</color>
-    <color name="glass_blob_blue_end">#00D9E7F2</color>
-    <color name="glass_blob_pink">#F6E3EA</color>
-    <color name="glass_blob_pink_end">#00F6E3EA</color>
-    <color name="glass_card">#B3FFFFFF</color>
-    <color name="glass_card_strong">#E6FFFFFF</color>
-    <color name="glass_stroke">#4DFFFFFF</color>
+    <color name="glass_blob_blue">#CBDCF5</color>
+    <color name="glass_blob_blue_end">#00CBDCF5</color>
+    <color name="glass_blob_pink">#F9DFEC</color>
+    <color name="glass_blob_pink_end">#00F9DFEC</color>
+    <color name="glass_blob_lavender">#E3DAF8</color>
+    <color name="glass_blob_lavender_end">#00E3DAF8</color>
+    <color name="glass_card_top">#C7FFFFFF</color>
+    <color name="glass_card_bottom">#80FFFFFF</color>
+    <color name="glass_card">#A6FFFFFF</color>
+    <color name="glass_card_strong">#F2FFFFFF</color>
+    <color name="glass_stroke">#66FFFFFF</color>
     <color name="ripple_glass">#33808A94</color>
 
     <!-- Gray colors needed for layouts -->

@@ -187,11 +187,11 @@ public class GlassTheme {
         for (MaterialButton button : buttons) {
             Object tag = button.getTag();
             if (TAG_PRIMARY.equals(tag)) {
-                button.setBackgroundTintList(ColorStateList.valueOf(primary));
+                button.setBackgroundTintList(ColorStateList.valueOf(glassify(primary)));
                 button.setTextColor(onColor(primary));
                 button.setStrokeColor(ColorStateList.valueOf(Color.TRANSPARENT));
             } else if (TAG_SECONDARY.equals(tag)) {
-                button.setBackgroundTintList(ColorStateList.valueOf(secondary));
+                button.setBackgroundTintList(ColorStateList.valueOf(glassify(secondary)));
                 button.setTextColor(onColor(secondary));
                 button.setStrokeColor(ColorStateList.valueOf(Color.TRANSPARENT));
             } else if (TAG_OUTLINED_PRIMARY.equals(tag)) {
@@ -250,6 +250,11 @@ public class GlassTheme {
         int b = Color.blue(background);
         double luminance = 0.299 * r + 0.587 * g + 0.114 * b;
         return luminance > 165 ? 0xFF37474F : 0xFFFFFFFF;
+    }
+
+    /** 给颜色加上 85% 不透明度，让按钮呈现透出背景的玻璃质感 */
+    private static int glassify(int color) {
+        return (color & 0x00FFFFFF) | 0xD9000000;
     }
 
     private static int blend(int foreground, int background) {
