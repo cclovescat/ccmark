@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.CompoundButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultCallback;
@@ -201,9 +202,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupAppearance() {
         swDarkMode.setChecked(GlassTheme.NIGHT_DARK.equals(GlassTheme.getNightMode(this)));
-        swDarkMode.setOnCheckedChangeListener(new SwitchMaterial.OnCheckedChangeListener() {
+        swDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(SwitchMaterial buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 GlassTheme.setNightMode(MainActivity.this,
                         isChecked ? GlassTheme.NIGHT_DARK : GlassTheme.NIGHT_LIGHT);
             }

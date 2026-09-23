@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.SeekBar;
 
 import androidx.appcompat.app.AppCompatDelegate;
@@ -173,14 +174,14 @@ public class GlassTheme {
      */
     public static void applyToRoot(Activity activity) {
         View root = activity.findViewById(android.R.id.content);
-        if (root != null) {
-            applyToViewTree(root,
+        if (root instanceof ViewGroup) {
+            applyToViewTree((ViewGroup) root,
                     getPrimaryColor(activity),
                     getSecondaryColor(activity));
         }
     }
 
-    public static void applyToViewTree(View root, int primary, int secondary) {
+    public static void applyToViewTree(ViewGroup root, int primary, int secondary) {
         ArrayList<MaterialButton> buttons = new ArrayList<>();
         root.findViewsWithClass(buttons, MaterialButton.class);
         for (MaterialButton button : buttons) {
