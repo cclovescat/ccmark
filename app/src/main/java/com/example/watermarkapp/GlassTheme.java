@@ -183,7 +183,7 @@ public class GlassTheme {
 
     public static void applyToViewTree(ViewGroup root, int primary, int secondary) {
         ArrayList<MaterialButton> buttons = new ArrayList<>();
-        root.findViewsWithClass(buttons, MaterialButton.class);
+        collectViews(root, MaterialButton.class, buttons);
         for (MaterialButton button : buttons) {
             Object tag = button.getTag();
             if (TAG_PRIMARY.equals(tag)) {
@@ -204,14 +204,14 @@ public class GlassTheme {
         }
 
         ArrayList<MaterialToolbar> toolbars = new ArrayList<>();
-        root.findViewsWithClass(toolbars, MaterialToolbar.class);
+        collectViews(root, MaterialToolbar.class, toolbars);
         for (MaterialToolbar toolbar : toolbars) {
             int glassPrimary = (primary & 0x00FFFFFF) | 0xB3000000;
             ViewCompat.setBackgroundTintList(toolbar, ColorStateList.valueOf(glassPrimary));
         }
 
         ArrayList<SwitchMaterial> switches = new ArrayList<>();
-        root.findViewsWithClass(switches, SwitchMaterial.class);
+        collectViews(root, SwitchMaterial.class, switches);
         for (SwitchMaterial sw : switches) {
             int[][] states = new int[][]{
                     new int[]{android.R.attr.state_checked},
@@ -223,10 +223,23 @@ public class GlassTheme {
         }
 
         ArrayList<SeekBar> seekBars = new ArrayList<>();
-        root.findViewsWithClass(seekBars, SeekBar.class);
+        collectViews(root, SeekBar.class, seekBars);
         for (SeekBar seekBar : seekBars) {
             seekBar.setProgressTintList(ColorStateList.valueOf(primary));
             seekBar.setThumbTintList(ColorStateList.valueOf(primary));
+        }
+    }
+
+    /** 递归收集视图树中指定类型的控件 */
+    private static <T extends View> void collectViews(View view, Class<T> clazz, List<T> out) {
+        if (clazz.isInstance(view)) {
+            out.add(clazz.cast(view));
+        }
+        if (view instanceof ViewGroup) {
+            ViewGroup group = (ViewGroup) view;
+            for (int i = 0; i < group.getChildCount(); i++) {
+                collectViews(group.getChildAt(i), clazz, out);
+            }
         }
     }
 
