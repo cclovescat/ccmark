@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer Rounded Square Shape -->
+    <path
+        android:pathData="M30,25h48c2.76,0 5,2.24 5,5v48c0,2.76 -2.24,5 -5,5h-48c-2.76,0 -5,-2.24 -5,-5v-48c0,-2.76 2.24,-5 5,-5z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.15"/>
+
+    <!-- Main Icon Shape: Stylized 'c' for ccmark and water drop -->
+    <path
+        android:pathData="M54,34c-11.05,0 -20,8.95 -20,20s8.95,20 20,20c6.08,0 11.52,-2.71 15.17,-6.98l-5.74,-4.1c-2.39,2.83 -5.92,4.64 -9.87,4.64 -7.21,0 -13.06,-5.85 -13.06,-13.06s5.85,-13.06 13.06,-13.06c4.01,0 7.59,1.81 9.99,4.67l5.72,-4.13C65.62,36.72 60.14,34 54,34z"
+        android:fillColor="#FFFFFF"/>
+
+    <!-- Water droplet detail -->
+    <path
+        android:pathData="M66,48c0,3.31 -2.69,6 -6,6s-6,-2.69 -6,-6 6,-10 6,-10 6,6.69 6,10z"
+        android:fillColor="#FF80AB"/>
+
+</vector>

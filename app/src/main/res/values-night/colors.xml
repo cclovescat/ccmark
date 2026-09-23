@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode overrides for the liquid glass theme -->
+    <color name="text_primary">#E4EAEE</color>
+    <color name="text_secondary">#97A6B3</color>
+    <color name="text_on_primary">#1C2A33</color>
+    <color name="text_on_secondary">#1C2A33</color>
+
+    <color name="glass_bg_base">#14161B</color>
+    <color name="glass_blob_blue">#1D2B3A</color>
+    <color name="glass_blob_blue_end">#001D2B3A</color>
+    <color name="glass_blob_pink">#2B1F2E</color>
+    <color name="glass_blob_pink_end">#002B1F2E</color>
+    <color name="glass_card">#B31F222A</color>
+    <color name="glass_card_strong">#E62A2E38</color>
+    <color name="glass_stroke">#26FFFFFF</color>
+
+    <color name="gray_200">#2A2E36</color>
+    <color name="gray_600">#9AA6B2</color>
+
+    <color name="primary_light">#14161B</color>
+    <color name="white">#E61E2027</color>
+</resources>

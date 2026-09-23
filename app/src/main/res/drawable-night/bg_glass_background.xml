@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/glass_bg_base" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:centerX="0.15"
+                android:centerY="0.08"
+                android:gradientRadius="520dp"
+                android:startColor="@color/glass_blob_blue"
+                android:endColor="@color/glass_blob_blue_end" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:centerX="0.9"
+                android:centerY="0.92"
+                android:gradientRadius="560dp"
+                android:startColor="@color/glass_blob_pink"
+                android:endColor="@color/glass_blob_pink_end" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:centerX="0.85"
+                android:centerY="0.12"
+                android:gradientRadius="380dp"
+                android:startColor="@color/glass_blob_pink"
+                android:endColor="@color/glass_blob_pink_end" />
+        </shape>
+    </item>
+</layer-list>

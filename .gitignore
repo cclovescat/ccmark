@@ -1,0 +1,24 @@
+.gradle
+local.properties
+.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+app/build
+*.iml
+
+# Build outputs
+app/release/
+*.apk
+*.aab
+
+# IDE
+.gradle/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
