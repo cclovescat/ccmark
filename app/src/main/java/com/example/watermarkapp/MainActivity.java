@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
@@ -207,7 +208,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupAppearance() {
-        swDarkMode.setChecked(GlassTheme.NIGHT_DARK.equals(GlassTheme.getNightMode(this)));
+        // 开关显示当前实际生效的模式：跟随系统时也能如实反映（系统暗色=开）
+        boolean nightNow = (getResources().getConfiguration().uiMode
+                & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+        swDarkMode.setChecked(nightNow);
         swDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
